@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Peace - Typing Test</title>
+    <link rel="stylesheet" href="typing.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">♕ Key Peace</a>
+    <a href="index.html" class="home-link">Home</a>
+</header>
+
+<main class="typing-container">
+    <p class="eyebrow">THE ART OF PRECISION</p>
+    <h1>Typing Speed Test</h1>
+    <p class="subtitle">Practice with purpose. Type with confidence.</p>
+
+    <div class="settings">
+        <label for="duration">Test Duration</label>
+        <select id="duration">
+            <option value="1">1 Minute</option>
+            <option value="5">5 Minutes</option>
+            <option value="10">10 Minutes</option>
+            <option value="15">15 Minutes</option>
+        </select>
+    </div>
+
+    <div class="stats">
+        <div><span id="time">60</span><small>TIME</small></div>
+        <div><span id="wpm">0</span><small>WPM</small></div>
+        <div><span id="accuracy">100%</span><small>ACCURACY</small></div>
+        <div><span id="errors">0</span><small>ERRORS</small></div>
+    </div>
+
+    <div class="practice-options">
+    <h3>Choose Your Practice</h3>
+
+    <button id="defaultMode">Default Passage</button>
+    <button id="importMode">Import Passage</button>
+    <button id="pasteMode">Paste from Other Pages</button>
+</div>
+
+<input type="file" id="fileInput" accept=".txt" hidden>
+
+<div id="customPassageArea" style="display:none;">
+    <textarea id="customPassage"
+        placeholder="Paste your passage here..."></textarea>
+    <button id="usePassage">Use This Passage</button>
+</div>
+
+<div id="passage" class="passage"></div>
+
+    <textarea id="typingInput" placeholder="Start typing here..." disabled></textarea>
+
+    <button id="startButton">Start Test</button>
+    <button id="resetButton">Reset</button>
+
+    <p id="message">Press Start Test when you are ready.</p>
+</main>
+
+<script src="typing.js"></script>
+</body>
+</html>

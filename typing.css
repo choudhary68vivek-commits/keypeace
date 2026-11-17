@@ -1,0 +1,279 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #183D35;
+    color: #F7F3E9;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid rgba(217, 193, 139, 0.25);
+}
+
+.logo {
+    color: #D9C18B;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    text-decoration: none;
+}
+
+.home-link {
+    color: #F7F3E9;
+    text-decoration: none;
+}
+
+.typing-container {
+    max-width: 950px;
+    margin: 65px auto;
+    padding: 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #D9C18B;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #C8D5CB;
+    margin-bottom: 35px;
+}
+
+.settings {
+    margin-bottom: 30px;
+}
+
+.settings label {
+    color: #D9C18B;
+    margin-right: 12px;
+}
+
+select {
+    padding: 12px 18px;
+    background: #245248;
+    color: #F7F3E9;
+    border: 1px solid #D9C18B;
+    border-radius: 4px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stats div {
+    background: #245248;
+    border: 1px solid rgba(217, 193, 139, 0.35);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.stats span {
+    display: block;
+    color: #D9C18B;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.stats small {
+    color: #C8D5CB;
+    letter-spacing: 2px;
+}
+
+.passage {
+    background: #20483F;
+    border: 1px solid rgba(217, 193, 139, 0.4);
+    padding: 30px;
+    border-radius: 5px;
+    text-align: left;
+    line-height: 2;
+    font-size: 19px;
+    color: #F7F3E9;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 20px;
+    background: #F7F3E9;
+    color: #183D35;
+    border: 2px solid #D9C18B;
+    border-radius: 5px;
+    font-size: 17px;
+    resize: vertical;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 14px 30px;
+    margin: 5px;
+    background: #D9C18B;
+    color: #183D35;
+    border: 1px solid #D9C18B;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+    color: #D9C18B;
+}
+
+#message {
+    color: #C8D5CB;
+    margin-top: 22px;
+}
+
+@media (max-width: 600px) {
+    .typing-container {
+        margin: 30px auto;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* PRACTICE MODE BUTTONS */
+
+.practice-options {
+    margin: 30px 0;
+}
+
+.practice-options h3 {
+    color: #D9C18B;
+    font-family: Georgia, serif;
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.practice-options button {
+    margin: 6px;
+}
+
+/* LIVE TYPING HIGHLIGHTING */
+
+.passage span.pending {
+    color: #C8D5CB;
+}
+
+.passage span.correct {
+    color: #70D69B;
+}
+
+.passage span.incorrect {
+    color: #FF7777;
+    background: rgba(255, 70, 70, 0.18);
+    border-bottom: 2px solid #FF7777;
+}
+
+.passage span.current {
+    border-left: 2px solid #D9C18B;
+    animation: blink-cursor 1s infinite;
+}
+
+@keyframes blink-cursor {
+    50% {
+        border-left-color: transparent;
+    }
+}
+
+/* CUSTOM PASSAGE BOX */
+
+#customPassageArea {
+    margin: 20px 0;
+}
+
+#customPassage {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    background: #F7F3E9;
+    color: #183D35;
+    border: 2px solid #D9C18B;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* EQUAL PASSAGE AND TYPING BOXES */
+
+.passage,
+#typingInput {
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    box-sizing: border-box;
+    padding: 22px;
+    border: 1px solid #D9C18B;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 2;
+    overflow-y: auto;
+}
+
+/* PASSAGE BOX */
+
+.passage {
+    background: #20483F;
+    color: #F7F3E9;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* TYPING BOX */
+
+#typingInput {
+    display: block;
+    background: #F7F3E9;
+    color: #183D35;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* SCROLLBAR DESIGN */
+
+.passage::-webkit-scrollbar,
+#typingInput::-webkit-scrollbar {
+    width: 7px;
+}
+
+.passage::-webkit-scrollbar-thumb,
+#typingInput::-webkit-scrollbar-thumb {
+    background: #D9C18B;
+    border-radius: 10px;
+}
+
